@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+body{
+    background-color: aliceblue;
+    font-family: 'Cairo', sans-serif;
+    width: 100vw;
+}
+
+/* ------------------------- fonts ------------------------------ */
+h2, h3{
+    font-weight: 550;
+}
+h3{
+    margin: 1.5em 0;
+}
+p{
+    font-weight: normal;
+}
+
+span{
+    color: grey;
+    font-weight: bold;
+}
+
+
+/* ---------------------------- stylng ----------------------------- */
+section{
+    border-bottom: 0.2rem solid red;
+    border-radius: 3px;
+    box-shadow: 0 0 20px rgb(190, 181, 181);
+    padding: 1.7em;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.one{
+    margin-top: 2rem;
+}
+.ten{
+    margin-bottom: 2rem;
+}
+
+
+/* ---------------------------- layout ----------------------------- */
+
+main{
+    background-color: antiquewhite;
+    margin: 2rem; 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 950px) {
+    main{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    .one, .five, .six{
+        grid-column: span 2;
+    }
+    .two{
+        grid-column: span 1;
+    }
+    .three{
+        grid-row: span 3;
+    }
+    .four{
+        grid-row: span 2;
+    }
+    .one{
+        margin-top: 0;
+    }
+    .ten{
+        margin-bottom: 0;
+    }
+}
